@@ -1,0 +1,30 @@
+import React, { Component } from 'react';
+// import { Card, CardSection, Input, Button } from './common';
+import { Card } from './common/Card';
+import { CardSection } from './common/CardSection';
+import { Input } from './common/Input';
+import { Button } from './common/Button';
+
+class LoginForm extends Component {
+  onEmailChange(text) {}
+
+  render() {
+    return (
+      <Card>
+        <CardSection>
+          <Input label="Email" placeholder="email@email.com" onChangeText={this.onEmailChange.bind(this)} />
+        </CardSection>
+
+        <CardSection>
+          <Input secureTextEntry label="Password" placeholder="password" />
+        </CardSection>
+
+        <CardSection>
+          <Button>Login</Button>
+        </CardSection>
+      </Card>
+    );
+  }
+}
+
+export default LoginForm;
