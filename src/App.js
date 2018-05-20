@@ -6,6 +6,7 @@ import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import config from '../config';
 import LoginForm from './components/LoginForm';
+import Router from './router/Router';
 
 class App extends Component {
   componentWillMount() {
@@ -17,7 +18,7 @@ class App extends Component {
 
     return (
       <Provider store={store}>
-        <LoginForm />
+        <Router />
       </Provider>
     );
   }
