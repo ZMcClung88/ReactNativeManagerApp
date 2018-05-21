@@ -3,7 +3,7 @@ import { View, Text, Picker } from 'react-native';
 import { connect } from 'react-redux';
 import { employeeUpdate } from '../actions';
 import { CardSection } from './common/CardSection';
-import { Input } from './common/Input';
+import { Input } from './common';
 
 class EmployeeForm extends Component {
   render() {

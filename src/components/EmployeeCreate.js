@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { View } from 'react-redux';
 import { connect } from 'react-redux';
 import { employeeUpdate, employeeCreate, resetForm } from '../actions';
-// import { Card, CardSection, Input, Button } from './common';
-import { Card } from './common/Card';
-import { CardSection } from './common/CardSection';
-import { Button } from './common/Button';
-import { Spinner } from './common/Spinner';
+import { Card, CardSection, Spinner, Button } from './common';
+// import { Card } from './common/Card';
+// import { CardSection } from './common/CardSection';
+// import { Button } from './common/Button';
+// import { Spinner } from './common/Spinner';
 import EmployeeForm from './EmployeeForm';
 
 class EmployeeCreate extends Component {
