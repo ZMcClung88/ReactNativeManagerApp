@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-redux';
 import { connect } from 'react-redux';
-import { employeeUpdate, employeeCreate } from '../actions';
+import { employeeUpdate, employeeCreate, resetForm } from '../actions';
 // import { Card, CardSection, Input, Button } from './common';
 import { Card } from './common/Card';
 import { CardSection } from './common/CardSection';
@@ -10,6 +10,10 @@ import { Spinner } from './common/Spinner';
 import EmployeeForm from './EmployeeForm';
 
 class EmployeeCreate extends Component {
+  componentWillMount() {
+    this.props.resetForm();
+  }
+
   onButtonPress() {
     const { name, phone, shift } = this.props;
     this.props.employeeCreate({ name, phone, shift: shift || 'Monday' });
@@ -33,4 +37,4 @@ const mapStateToProps = state => {
   return { name, phone, shift };
 };
 
-export default connect(mapStateToProps, { employeeUpdate, employeeCreate })(EmployeeCreate);
+export default connect(mapStateToProps, { employeeUpdate, employeeCreate, resetForm })(EmployeeCreate);
